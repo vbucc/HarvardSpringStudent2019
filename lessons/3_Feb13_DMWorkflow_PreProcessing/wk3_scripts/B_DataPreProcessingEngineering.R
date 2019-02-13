@@ -3,7 +3,7 @@
 #' Purpose: Fundraising PreProcessing
 
 # Setwd
-setwd("/cloud/project/lessons/3_Feb13_DMWorkflow_PreProcessing/finalWk3/wk3_data")
+setwd("/cloud/project/lessons/3_Feb13_DMWorkflow_PreProcessing/wk3_data")
 
 # Libs
 library(vtreat)
@@ -112,7 +112,8 @@ plan <- designTreatmentsC(leftData,
                           y1Success)
 treatedLeftData <- prepare(plan, leftData)
 
-###### TIME FOR YOUR FIRST MODEL; If you want you can howl at the moon in joy!
+###### TIME FOR YOUR FIRST MODEL; 
+#' If you want you can howl at the moon in joy!
 #'        _
 #'       / \      _-'/
 #'    __/|  \-''- _ /
