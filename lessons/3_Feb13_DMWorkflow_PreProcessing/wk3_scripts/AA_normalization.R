@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Data: 5-17-2018
+#' Data: 2-13-2019
 #' Purpose: Show normalization in action
 #'
 
