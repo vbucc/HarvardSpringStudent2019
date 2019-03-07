@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Data: 10-21-2018
+#' Data: 3-7-2019
 #' Purpose: Compare 2 algos DT & KNN
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
@@ -22,16 +22,23 @@ summary(df)
 head(df)
 
 # Partitioning
-set.seed(1234)
 splitPercent <- round(nrow(df) %*% .1) # KNN takes ages, so dont increase!
 totalRecords <- 1:nrow(df)
+set.seed(1234)
 idx <- sample(totalRecords, splitPercent)
 
 trainDat <- df[idx,]
 testDat  <- df[-idx,]
 
 # Treatment
-plan         <- designTreatmentsC(trainDat, names(trainDat), 'y','yes')
+targetVar       <- names(trainDat)[17]
+informativeVars <- names(trainDat)[1:16]
+
+# Design a "C"ategorical variable plan 
+plan <- designTreatmentsC(trainDat, 
+                          informativeVars,
+                          targetVar,'yes')
+
 treatedTrain <- prepare(plan, trainDat)
 treatedTest  <- prepare(plan, testDat)
 
@@ -44,12 +51,12 @@ saveRDS(treeFit, 'comparisonTree.rds')
 treeFit <- readRDS('comparisonTree.rds')
 
 # Knn Fit - Takes a LONG time; think about why this is.  Distances are measured from all points!  As a result, KNN is not used on large data sets.
-#knnFit  <- train(y ~ ., 
-#                data = treatedTrain, 
-#                method = "knn", 
-#                preProcess = c("center","scale"),
-#                tuneLength = 1)
-#saveRDS(knnFit, 'comparisonKnn.rds')
+knnFit  <- train(y ~ ., 
+                data = treatedTrain, 
+                method = "knn", 
+                preProcess = c("center","scale"),
+                tuneLength = 1)
+saveRDS(knnFit, 'comparisonKnn.rds')
 knnFit <- readRDS('comparisonKnn.rds')
 
 # Training Set Evaluation
