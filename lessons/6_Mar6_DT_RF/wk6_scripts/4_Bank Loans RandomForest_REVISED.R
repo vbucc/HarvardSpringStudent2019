@@ -33,7 +33,6 @@ trainDat <- dat[idx,]
 testDat  <- dat[-idx,]
 
 # Treatment
-# Treatment
 targetVar       <- names(trainDat)[17]
 informativeVars <- names(trainDat)[1:16]
 
