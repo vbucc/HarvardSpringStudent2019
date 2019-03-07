@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Data: 6-4-2018
+#' Data: 3-7-2019
 #' Purpose: Load data build a random forest tree; this version uses more equally balanced target classes
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
@@ -23,20 +23,27 @@ dat <- read.csv('bank-downSampled.csv')
 # EDA
 summary(dat)
 
-set.seed(1234)
 # To save time in class, we are only training on 20% of the data
 splitPercent <- round(nrow(dat) %*% .2)
 totalRecords <- 1:nrow(dat)
+set.seed(1234)
 idx <- sample(totalRecords, splitPercent)
 
 trainDat <- dat[idx,]
 testDat  <- dat[-idx,]
 
 # Treatment
-plan         <- designTreatmentsC(trainDat, names(trainDat), 'Class','yes')
+# Treatment
+targetVar       <- names(trainDat)[17]
+informativeVars <- names(trainDat)[1:16]
+
+# Design a "C"ategorical variable plan 
+plan <- designTreatmentsC(trainDat, 
+                          informativeVars,
+                          targetVar,'yes')
+
 treatedTrain <- prepare(plan, trainDat)
 treatedTest  <- prepare(plan, testDat)
-
 
 # Fit a random forest model with Caret
 downSampleFit <- train(Class ~ .,
