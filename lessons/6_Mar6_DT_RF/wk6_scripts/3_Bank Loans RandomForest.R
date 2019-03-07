@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Data: 6-4-2018
+#' Data: 3-7-2019
 #' Purpose: Load data build a random forest tree
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
@@ -46,14 +46,21 @@ downDat <- downSample(x = df[, -ncol(df)], y = df$y)
 # Balanced class
 table(downDat$Class) #####~~changed name to class~~######
 
-# Partition DownSampled
+# Partition DownSampled using a different function
 set.seed(1234)
 idx <- createDataPartition(y = downDat$Class, p= 0.8, list=F)
 trainDat <- downDat[idx,]
 testDat  <- downDat[-idx,]
 
 # Treatment
-plan         <- designTreatmentsC(trainDat, names(trainDat), 'Class','yes')
+targetVar       <- names(trainDat)[17]
+informativeVars <- names(trainDat)[1:16]
+
+# Design a "C"ategorical variable plan 
+plan <- designTreatmentsC(trainDat, 
+                          informativeVars,
+                          targetVar,'yes')
+
 treatedTrain <- prepare(plan, trainDat)
 treatedTest  <- prepare(plan, testDat)
 
@@ -81,8 +88,8 @@ plot(varImp(downSampleFit), top = 20)
 getTree(downSampleFit$finalModel,1, labelVar=TRUE)
 
 # Add more trees to the forest with the randomForest package (caret takes a long time bc its more thorough)
-#moreVoters <- randomForest(Class ~ ., data = treatedTrain, ntree=500)
-#saveRDS(moreVoters, 'moreVoters.rds')
+moreVoters <- randomForest(Class ~ ., data = treatedTrain, ntree=500)
+saveRDS(moreVoters, 'moreVoters.rds')
 moreVoters <- readRDS('moreVoters.rds')
 
 # Confusion Matrix, compare to 5 trees ~66% accuracy
