@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Data: 10-21-2018
+#' Data: 3-7-2019
 #' Purpose: Load data build a decision tree
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
