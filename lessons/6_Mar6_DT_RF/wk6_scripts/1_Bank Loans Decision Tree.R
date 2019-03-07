@@ -20,9 +20,9 @@ summary(dat)
 head(dat)
 
 # Partitioning
-set.seed(1234)
 splitPercent <- round(nrow(dat) %*% .9)
 totalRecords <- 1:nrow(dat)
+set.seed(1234)
 idx <- sample(totalRecords, splitPercent)
 
 trainDat <- dat[idx,]
@@ -82,10 +82,11 @@ dat <- read.csv('bank-full_v2.csv') # now a bit more data to approximate real sc
 summary(dat)
 head(dat)
 
-set.seed(1234)
+
 # To save time in class, we are only training on 20% of the data
 splitPercent <- round(nrow(dat) %*% .2)
 totalRecords <- 1:nrow(dat)
+set.seed(1234)
 idx <- sample(totalRecords, splitPercent)
 
 trainDat <- dat[idx,]
@@ -98,7 +99,7 @@ fit <- train(y ~., #formula based
              #instead of knn, caret does "recursive partitioning (trees)
              method = "rpart", 
              #Define a range for the CP to test
-             tuneGrid = data.frame(cp = c(0.01, 0.05)), 
+             tuneGrid = data.frame(cp = c(0.1, 0.01, 0.05, 0.07)), 
              #ie don't split if there are less than 1 record left and only do a split if there are at least 2+ records
              control = rpart.control(minsplit = 1, minbucket = 2)) 
 
