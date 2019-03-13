@@ -37,6 +37,7 @@ stockChk <- function(tickerSymbol='AAPL', lookBack =365, kpi = 'macd', recommend
   }
   if(kpi =='sma'){
     xKPI <-SMA(x[,closeIdx], 50)
+    yKPI <-SMA(x[,closeIdx], 200)
   }
   
   # Visual Titles
@@ -46,7 +47,7 @@ stockChk <- function(tickerSymbol='AAPL', lookBack =365, kpi = 'macd', recommend
   
   # Construct kpi visuals
   if(kpi=='sma'){
-    smaData <- cbind(x[,closeIdx],xKPI) 
+    smaData <- cbind(x[,closeIdx],xKPI, yKPI) 
     kpiPlot <- dygraph(smaData, 
                        group = "Price", height = 200, 
                        width = "100%", main = kpiTitle) %>%
