@@ -3,7 +3,7 @@
 #' Purpose: Load data build a KNN Predictor
 
 ## Set the working directory
-setwd("/cloud/project/lessons/5_Feb27_ModelEval_KNN/wk5_data")
+setwd("/cloud/project/lessons/5_Feb27_LogReg_KNN/wk5_data")
 
 ## Load the libraries
 library(caret)
