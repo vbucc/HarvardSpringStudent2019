@@ -34,7 +34,7 @@ text      <- xml_text(pNodes)
 # Organize
 textDF <- data.frame(startTime, duration, text)
 
-# Drop line breaks 
+# Drop line breaks if it causes no text rows; otherwise use text<-str_replace_all(text, "[\n]" , "") to drop while preserving text on line
 textDF<-  textDF[!grepl('\n', textDF$text),]
 
 # Examine to make sure format is ok
