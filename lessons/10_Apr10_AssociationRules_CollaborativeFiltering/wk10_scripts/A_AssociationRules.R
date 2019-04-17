@@ -6,7 +6,7 @@
 library(arules)
 
 # WD
-setwd("/cloud/project/lessons/10_Apr10_CollFiltering_AssocRules/wk10_data")
+setwd("/cloud/project/lessons/10_Apr10_AssociationRules_CollaborativeFiltering/wk10_data")
 
 # Data
 faceDF <- read.csv("Faceplate.csv")
