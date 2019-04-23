@@ -66,7 +66,7 @@ wineTDMm <- as.matrix(wineTDM)
 
 # See a bi-gram
 grep('wine country', rownames(wineTDMm))
-wineTDMm[4739:4741,870:871]
+wineTDMm[4440:4444,870:871]
 
 # Get Row Sums & organize
 wineTDMv <- sort(rowSums(wineTDMm), decreasing = TRUE)
@@ -76,7 +76,7 @@ wineDF   <- data.frame(word = names(wineTDMv), freq = wineTDMv)
 display.brewer.all()
 
 # Choose a color & drop light ones
-pal <- brewer.pal(8, "Blues")
+pal <- brewer.pal(8, "Purples")
 pal <- pal[-(1:2)]
 
 # Make simple word cloud
