@@ -1,0 +1,49 @@
+## Student Additions
+Gender Shades Bias in training data
+https://youtu.be/TWWsW1w-BVo
+
+https://www.forbes.com/sites/kalevleetaru/2016/06/17/are-research-ethics-obsolete-in-the-era-of-big-data/#71e882cb7aa3
+https://www.cnbc.com/2019/04/08/eu-releases-guidelines-for-ethical-ai.html
+https://www.nature.com/articles/d41586-019-01164-z
+https://techcrunch.com/2019/04/13/microsoft-support-agent-email-hack/
+https://www.cnbc.com/2017/11/20/what-does-google-know-about-me.html
+https://www.wired.com/story/can-ai-be-fair-judge-court-estonia-thinks-so/
+http://reillytop10.com/2018/12/16/sidewalk-labs/
+https://www.wsj.com/articles/our-software-is-biased-like-we-are-can-new-laws-change-that-11553313609?mod=searchresults&page=1&pos=19: 
+https://www.vox.com/science-and-health/2019/1/23/18194717/alexandria-ocasio-cortez-ai-bias
+https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-inequality-health.html
+https://medium.com/@nils.backe/is-amazon-alexa-invading-privacy-analysis-of-an-ethical-dilemma-f7e064ab6dba
+https://hbr.org/2019/01/when-neuromarketing-crosses-the-line
+
+### https://www.businessinsider.com/hedge-funds-watching-linkedin-lawsuit-on-web-scraped-data-2019-3
+Hedge funds are watching a key lawsuit involving LinkedIn to see if they can spend billions on web-scraped data
+
+Bradley Saacks
+Mar. 14, 2019, 9:48 AM
+A legal case involving CEO Jeff Weiner's LinkedIn will determine the future for web scraping. 
+Web scraping has become integral to many hedge funds' data-collection processes, with a recent research report finding that one out of every 20 web-page visits in 2018 came from a scraping bot run by a fund or sell-side research institution.
+Hedge funds are expected to pay nearly $2 billion in 2020 on the collection and storage of data that had been scraped from the web, the report notes, but a lawsuit involving LinkedIn could change what funds are legally allowed to collect.
+
+The internet is crawling with bots, and many of them belong to hedge funds. But a lawsuit involving LinkedIn could change what funds are legally allowed to collect.
+A report from Opimas found that one out of every 20 website visits in 2018 came from a fund or sell-side research firm that was scraping the page for information. Hedge funds have built the tremendous amount of data they scrape into their systems and are expected to spend nearly $2 billion on web scraping alone in 2020, a sliver of the overall money that is pouring into the exploding alternative-data scene.
+But the pedal-to-the-metal approach of scaling up and building out web-scraping units by hedge funds may be for naught as the courts try to create a framework for what is allowed on the web.
+In August 2017, a judge in the Northern District of California ruled that public LinkedIn pages could be scraped by hiQ, a company that used the data trawled by its bots to inform employers about their employees' web activity, even though LinkedIn's terms of use forbade the use of any web-scraping bot.
+The case, which is in the appeals process in the 9th District, is being watched by lawyers and funds closely to determine what the future will be for an increasingly important part of hedge funds' investment process.
+
+With the judge ruling against LinkedIn, funds are still ramping up their web scraping for now, according to Peter Greene, the vice chair of the investment-management group at the law firm Lowenstein Sandler.
+"I don't think it is scaring folks from using it," Greene said of LinkedIn's call to stop scraping. The most significant change has come from hedge funds' compliance departments that are tracking litigation related to web scraping and are generally more knowledgeable and sophisticated around digital data collection, he said.
+A backlash has mounted over perceived invasions of privacy
+But as a backlash has mounted over perceived invasions of privacy by tech companies like Facebook and Google, hedge funds need to be prepared to defend and possibly alter their data strategies if there is a sudden pullback on what is legally allowed to be scraped, lawyers say.
+"The key is determining what does it mean to be public on the internet," Greene said.
+
+Just a couple of years ago, he said, it was only the biggest firms that understood the ins and outs of the litigation around the space, but now it's "all sizes of managers."
+And beyond the legal risk, the headline risk that comes with collecting and using large swatches of online data needs to be top of mind as well, said Stacey Brandenburg, a lawyer with ZwillGen, in a presentation at the data company Quandl's annual conference last month.
+Web scraping in particular is an area where there are motivated third parties — the websites — that are unhappy with the practice.
+"When you're developing a web-scraping program, you want to think through and monitor carefully what your web-scrapes look like and how they are being responded to by a site so you could be on notice to the point where it is unequivocally clear that a site has revoked your authorization and doesn't want you to be there, because the next step is to send a cease-and-desist and potentially to sue you," Brandenburg said.
+Fund managers are getting overwhelmed
+A pullback on the amount of data that can be scraped could be a good thing for managers that are being overwhelmed by the amount of information coming in, said Fidelity's head of artificial intelligence and advanced data, John Avery, at an industry conference earlier this year.
+"If anything, I think folks are scraping more than they need," said Evan Reich, a data strategist at the $20 billion BlueMountain Capital Management. He warned against overreliance on web-scraping data that wasn't properly filtered.
+See more: Hedge funds are spending billions to get an edge through access to satellite images and credit-card transactions. Now they fear a crackdown is coming.
+If you do accidentally pull in information that has data that a hedge fund can't legally use — like personally identifiable credit-card info — and build models using it, "then it may not be able to be purged," Reich said.
+"Ideally you never want to have, 10 years down the road, someone says purge my data, and you'd rather it not be something that's impossible, or extremely difficult, to purge," Reich said.
+"No data set is so good that it is worth betting the firm on."
